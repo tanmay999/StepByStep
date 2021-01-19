@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="org.StepByStep by packages" duration-ms="3838" started-at="2020-11-11T00:29:27 IST" finished-at="2020-11-11T00:29:31 IST">
+    <groups>
+    </groups>
+    <test name="test_cases_crud" duration-ms="3838" started-at="2020-11-11T00:29:27 IST" finished-at="2020-11-11T00:29:31 IST">
+      <class name="test_cases_crud.post_t01">
+        <test-method status="FAIL" signature="post_t01(java.lang.String, java.lang.String)[pri:0, instance:test_cases_crud.post_t01@394e1a0f]" name="post_t01" duration-ms="424" started-at="2020-11-11T00:29:31 IST" data-provider="test_data" finished-at="2020-11-11T00:29:31 IST">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
+            <message>
+              <![CDATA[
+[public void test_cases_crud.post_t01.post_t01(java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: post_t01([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) rocky,(java.lang.String) tennis,(java.lang.String) 1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+[public void test_cases_crud.post_t01.post_t01(java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: post_t01([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String) rocky,(java.lang.String) tennis,(java.lang.String) 1]
+at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
+at org.testng.internal.Parameters.injectParameters(Parameters.java:909)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- post_t01 -->
+      </class> <!-- test_cases_crud.post_t01 -->
+      <class name="test_cases_crud.get_t01">
+        <test-method status="PASS" signature="get_test1()[pri:0, instance:test_cases_crud.get_t01@396f6598]" name="get_test1" duration-ms="3391" started-at="2020-11-11T00:29:27 IST" finished-at="2020-11-11T00:29:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get_test1 -->
+      </class> <!-- test_cases_crud.get_t01 -->
+    </test> <!-- test_cases_crud -->
+  </suite> <!-- org.StepByStep by packages -->
+</testng-results>
