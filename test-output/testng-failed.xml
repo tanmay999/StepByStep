@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [org.StepByStep by packages]">
-  <test thread-count="5" name="test_cases_crud(failed)">
+  <test thread-count="5" name="test_cases(failed)">
     <classes>
-      <class name="test_cases_crud.post_t01">
+      <class name="test_cases.post_t01">
         <methods>
           <include name="post_t01"/>
         </methods>
-      </class> <!-- test_cases_crud.post_t01 -->
+      </class> <!-- test_cases.post_t01 -->
     </classes>
-  </test> <!-- test_cases_crud(failed) -->
+  </test> <!-- test_cases(failed) -->
 </suite> <!-- Failed suite [org.StepByStep by packages] -->

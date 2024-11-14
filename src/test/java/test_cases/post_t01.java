@@ -1,4 +1,4 @@
-package test_cases_crud;
+package test_cases;
 
 import org.json.simple.JSONObject;
 import org.testng.annotations.DataProvider;
@@ -8,8 +8,6 @@ import io.restassured.http.ContentType;
 import utilities.excel_utilityTest;
 
 import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
-import static org.hamcrest.Matchers.*;
 
 import java.util.HashMap;
 
