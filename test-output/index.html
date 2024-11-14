@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-org_StepByStep_by_packages">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-org_StepByStep_by_packages" title="test_cases_crud.post_t01" hash-for-method="post_t01">post_t01</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-org_StepByStep_by_packages" title="test_cases.post_t01" hash-for-method="post_t01">post_t01</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-org_StepByStep_by_packages -->
@@ -116,7 +116,7 @@
                     <div class="method-list-content passed suite-org_StepByStep_by_packages">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-org_StepByStep_by_packages" title="test_cases_crud.get_t01" hash-for-method="get_test1">get_test1</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-org_StepByStep_by_packages" title="test_cases.get_t01" hash-for-method="get_test1">get_test1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-org_StepByStep_by_packages -->
@@ -134,7 +134,7 @@
           <div class="suite-org_StepByStep_by_packages-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">test_cases_crud.post_t01</span>
+              <span class="class-name">test_cases.post_t01</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -143,7 +143,7 @@
                   </a> <!-- post_t01 -->
                   <span class="method-name">post_t01</span>
                   <div class="stack-trace">org.testng.internal.reflect.MethodMatcherException: 
-[public void test_cases_crud.post_t01.post_t01(java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+[public void test_cases.post_t01.post_t01(java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
 Data provider mismatch
 Method: post_t01([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}])
 Arguments: [(java.lang.String) rocky,(java.lang.String) tennis,(java.lang.String) 1]
@@ -179,7 +179,7 @@ Arguments: [(java.lang.String) rocky,(java.lang.String) tennis,(java.lang.String
           <div class="suite-org_StepByStep_by_packages-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test_cases_crud.get_t01</span>
+              <span class="class-name">test_cases.get_t01</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -201,15 +201,15 @@ Arguments: [(java.lang.String) rocky,(java.lang.String) tennis,(java.lang.String
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;org.StepByStep by packages&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;test_cases_crud&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;test_cases&quot;&gt;
     &lt;packages&gt;
-      &lt;package name=&quot;test_cases_crud&quot;/&gt;
+      &lt;package name=&quot;test_cases&quot;/&gt;
     &lt;/packages&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test_cases_crud.get_t01&quot;/&gt;
-      &lt;class name=&quot;test_cases_crud.post_t01&quot;/&gt;
+      &lt;class name=&quot;test_cases.get_t01&quot;/&gt;
+      &lt;class name=&quot;test_cases.post_t01&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- test_cases_crud --&gt;
+  &lt;/test&gt; &lt;!-- test_cases --&gt;
 &lt;/suite&gt; &lt;!-- org.StepByStep by packages --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -221,7 +221,7 @@ Arguments: [(java.lang.String) rocky,(java.lang.String) tennis,(java.lang.String
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">test_cases_crud (2 classes)</span>
+                <span class="test-name">test_cases (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -250,11 +250,11 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'get_test1')
-data.setCell(0, 2, 'test_cases_crud.get_t01')
+data.setCell(0, 2, 'test_cases.get_t01')
 data.setCell(0, 3, 3391);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'post_t01')
-data.setCell(1, 2, 'test_cases_crud.post_t01')
+data.setCell(1, 2, 'test_cases.post_t01')
 data.setCell(1, 3, 424);
 window.suiteTableData['org_StepByStep_by_packages']= { tableData: data, tableDiv: 'times-div-org_StepByStep_by_packages'}
 return data;
@@ -286,7 +286,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test_cases_crud.get_t01</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test_cases.get_t01</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">get_test1</span>
                 <span class="method-start">0 ms</span>

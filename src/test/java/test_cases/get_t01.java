@@ -1,16 +1,15 @@
 
 
-package test_cases_crud;
+package test_cases;
 
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
 import org.json.simple.JSONObject;
 
-public class get_t01 {
+public class get_t01 extends  BaseTest {
 	
 	@Test
 	public void get_test1(){
