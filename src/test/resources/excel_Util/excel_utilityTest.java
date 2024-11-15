@@ -1,9 +1,12 @@
 package utils.excel_Util;
 
 
+import org.testng.annotations.DataProvider;
+
 public class excel_utilityTest {
-	
-	
+
+
+	@DataProvider(name="dataProvide1")
 	public static Object[][] get_Array_data() {
 		
 		

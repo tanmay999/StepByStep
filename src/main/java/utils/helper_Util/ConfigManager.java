@@ -5,19 +5,20 @@ import java.util.Properties;
 
 public class ConfigManager {
 
-   private static Properties properties=new Properties();
+   Properties properties;
 
     public  ConfigManager() throws IOException {
+        properties=new Properties();
         FileInputStream fileInputStream    = new FileInputStream(System.getProperty("user.dir")+File.separator+"src\\test\\resources\\GlobalProperties.properties");
         properties.load(fileInputStream);
     }
 
 
-        public static  String get(String key){
+        public   String get(String key){
             return properties.getProperty(key);
         }
 
-        public static void set(String key,String value){
+        public  void set(String key,String value){
             properties.setProperty(key,value);
         }
 

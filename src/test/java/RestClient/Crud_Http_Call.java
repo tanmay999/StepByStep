@@ -4,6 +4,8 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
+import pojo.CreateProjectPojoRequest.CreatePetRoot;
 
 import java.io.File;
 import java.util.Map;
@@ -12,9 +14,11 @@ import java.util.Map;
 public class Crud_Http_Call {
 
 
-    public static  Response doGet(String httpMethod,String baseUri,String contentType,String basePath,Map<String,String> tokenMap,String params,boolean log){
+    public static  Response doGet(String httpMethod,String baseUri,String contentType,String basePath,
+                                  Map<String,String> tokenMap,Map<String,String> queryParam,String params,boolean log){
         if(setBaseURI(baseUri)){
-            RequestSpecification request = createRequestSpec(contentType,params,tokenMap,log);
+            RequestSpecification request = createRequestSpec(contentType,tokenMap,log);
+            applyPrams(request,queryParam,params);
 
             Response response = executeHttpMethod(httpMethod,request,basePath);
             return  response;
@@ -23,7 +27,27 @@ public class Crud_Http_Call {
         return null;
     }
 
- /*   public RequestSpecification setUpRequestHeader(RequestSpecification requestSpecification, String baseUrl, String contentType, String authkey) {
+
+    public static <T> Response doPost(T body,String httpMethod,String baseUri,String contentType,String endpoint,Map<String,String> tokenParam,
+                         Map<String,String> queryParam,String params,boolean log ){
+        ResponseSpecification responseSpec = null;
+        Response response =null;
+        if(setBaseURI(baseUri)){
+            RequestSpecification request = createRequestSpec(contentType,tokenParam,log);
+            applyPrams(request,queryParam,params);
+
+            response =    request.body(body).post(endpoint).then().extract().response();
+            response.prettyPrint();
+
+        }
+
+        return  response;
+
+    }
+
+
+
+ /*   public RequestSpecification setUpRequestHeader(RequestSpecification, String baseUrl, String contentType, String authkey) {
         requestSpecification = RestAssured.given();
         requestSpecification.baseUri(baseUrl);
         requestSpecification.contentType(contentType);
@@ -45,12 +69,12 @@ public class Crud_Http_Call {
     }*/
 
 
-    private void applyPrams(RequestSpecification requestSpecification, Map<String, String> queryParams, Map<String, String> pathParams) {
+    private  static void applyPrams(RequestSpecification requestSpecification, Map<String, String> queryParams, String pathParams) {
         if (queryParams != null) {
             requestSpecification.queryParams(queryParams);
         }
         if (pathParams != null)
-            requestSpecification.pathParams(pathParams);
+            requestSpecification.pathParam("id",pathParams);
     }
 
     private static boolean setBaseURI(String baseUri) {
@@ -70,7 +94,7 @@ public class Crud_Http_Call {
     }
 
 
-    private static RequestSpecification createRequestSpec(String contentType, String params, Map<String, String> tokenMap,
+    private static RequestSpecification createRequestSpec(String contentType, Map<String, String> tokenMap,
                                                           boolean log) {
 
         RequestSpecification requestSpecification = null;
@@ -80,11 +104,6 @@ public class Crud_Http_Call {
 
         if (tokenMap!=null && tokenMap.size() > 0) {
             requestSpecification.headers(tokenMap);
-        }
-        if (params!=null) {
-            requestSpecification.pathParam("id",params);
-           // requestSpecification.pathParams(paramsMap);
-            //requestSpecification.params(paramsMap);
         }
 
         if (contentType != null) {
