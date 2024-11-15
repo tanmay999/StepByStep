@@ -12,31 +12,38 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.source>1.8</maven.compiler.source>
+      <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
+
 
   <dependencies>
   
-  <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
-<dependency>
-    <groupId>io.rest-assured</groupId>
-    <artifactId>rest-assured</artifactId>
-    <version>4.3.0</version>
-    <scope>test</scope>
-</dependency>
-  
-  <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi</artifactId>
-    <version>3.17</version>
-</dependency>
+
+
+      <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+      <dependency>
+          <groupId>io.rest-assured</groupId>
+          <artifactId>rest-assured</artifactId>
+          <version>5.0.0</version>
+          <scope>test</scope>
+      </dependency>
+
+
+      <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+      <dependency>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi</artifactId>
+          <version>5.0.0</version>
+      </dependency>
+
   
   
   <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi-ooxml</artifactId>
-    <version>3.17</version>
+    <version>5.0.0</version>
 </dependency>
   
   
@@ -94,6 +101,17 @@
           <artifactId>jackson-databind</artifactId>
           <version>2.16.2</version>
       </dependency>
+
+
+      <!-- https://mvnrepository.com/artifact/com.github.tomakehurst/wiremock -->
+      <dependency>
+          <groupId>com.github.tomakehurst</groupId>
+          <artifactId>wiremock</artifactId>
+          <version>2.27.1</version>
+          <type>pom</type>
+          <scope>test</scope>
+      </dependency>
+
 
 
 
