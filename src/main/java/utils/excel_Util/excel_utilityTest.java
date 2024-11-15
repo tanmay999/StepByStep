@@ -1,6 +1,5 @@
-package utilities;
+package utils.excel_Util;
 
-import org.testng.annotations.DataProvider;
 
 public class excel_utilityTest {
 	
@@ -15,7 +14,7 @@ public class excel_utilityTest {
 		 
 		   Object[][] data_obj ;
 		
-		excel_utility utils= new excel_utility(workbook_path,sheet_name);
+		utilities.excel_utility utils= new utilities.excel_utility(workbook_path,sheet_name);
 		
 	    row_count=	utils.getRowCount();
 	    col_count=  utils.getColCount();

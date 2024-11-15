@@ -3,15 +3,13 @@ package test_cases;
 import org.json.simple.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import io.restassured.http.ContentType;
-import utilities.excel_utilityTest;
-
+import utils.excel_Util.excel_utilityTest;
 import static io.restassured.RestAssured.*;
 
 import java.util.HashMap;
 
-public class post_t01  extends  excel_utilityTest{
+public class post_t01  extends excel_utilityTest {
 	
     
 	@DataProvider(name="test_data")
