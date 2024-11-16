@@ -1,0 +1,18 @@
+{
+  "id": 56483,
+  "category": {
+    "id": 0,
+    "name": "rocky"
+  },
+  "name": "doggy",
+  "photoUrls": [
+    "myphotofromgallery"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "tan"
+    }
+  ],
+  "status": "available"
+}

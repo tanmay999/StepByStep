@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import payload.CreatePostRequestBody;
 import pojo.CreateProjectPojoRequest.CreatePetRoot;
 import utils.helper_Util.ConfigManager;
+
 import java.io.IOException;
 
 
@@ -35,12 +36,13 @@ public class TestCase1 extends  BaseTest{
         configManager = new ConfigManager();
         String baseUriPet = configManager.get("BASE_URI_PET");
         String basePath= configManager.get("PET_POST_BY_ID");
-        CreatePetRoot createPetRoot = new CreatePetRoot();
         CreatePostRequestBody createPostRequestBody = new CreatePostRequestBody();
         CreatePetRoot createPetRootBody =createPostRequestBody.postPetRequestBody();
         Crud_Http_Call.doPost(createPetRootBody,"POST",baseUriPet,"JSON",basePath,null,null,null,true);
 
     }
+
+
 
 
 }

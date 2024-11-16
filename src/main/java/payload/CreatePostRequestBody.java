@@ -3,7 +3,9 @@ package payload;
 import pojo.CreateProjectPojoRequest.Category;
 import pojo.CreateProjectPojoRequest.CreatePetRoot;
 import pojo.CreateProjectPojoRequest.Tag;
+import utils.helper_Util.SerializationHelper;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -25,7 +27,7 @@ public class CreatePostRequestBody {
 
             Category category = new Category();
             category.setId(1);
-            category.setName("HJBCJBKJD");
+            category.setName("HJBCJBvjhbjbKJD");
 
             List<String>  photoUrl = new ArrayList<>();
             photoUrl.add("jhbcjndjkn");
@@ -40,4 +42,15 @@ public class CreatePostRequestBody {
             return  createPetRoot;
 
       }
+
+      public CreatePetRoot postPetRequestBodyFromFile() throws IOException {
+
+            SerializationHelper serializationHelper = new SerializationHelper();
+            String filepath="C:\\Users\\tanma\\Documents\\StepByStep\\src\\test\\resources\\jsonFiles\\PostRequest1.json";
+            CreatePetRoot reqStr= (CreatePetRoot) serializationHelper.DeserializeJsonFileToPojo(filepath);
+                  return reqStr;
+      }
+
+
+
 }

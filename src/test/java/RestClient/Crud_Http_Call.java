@@ -5,7 +5,6 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import pojo.CreateProjectPojoRequest.CreatePetRoot;
 
 import java.io.File;
 import java.util.Map;
